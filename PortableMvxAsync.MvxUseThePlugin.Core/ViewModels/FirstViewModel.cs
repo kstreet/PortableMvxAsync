@@ -27,7 +27,7 @@ namespace PortableMvxAsync.MvxUseThePlugin.Core.ViewModels
         {
             get
             {
-                // TODO: Neither One of these Approaches makes the await issue below go away
+                // TODO: Neither One of these cmd syntax Approaches makes the await error below go away
                 _simpleAsyncCommand = _simpleAsyncCommand ?? new MvxCommand(DoMySimpleAsyncCommand);
                 return _simpleAsyncCommand;
 
@@ -41,6 +41,10 @@ namespace PortableMvxAsync.MvxUseThePlugin.Core.ViewModels
             // original code
             //string result = await LongRunningMethodAsync("World");
             //Label3.Content = result;
+
+
+            // AWAIT ERROR HERE:
+            // Cannot await 'System.Threading.Tasks.Task<string>'	
 
             string result = await _asyncTesterPlugin.LongRunningMethodAsync(
                 "this is a call and message to LongRunningMethodAsync inside the Mvx plugin from FirstViewModel!!");
