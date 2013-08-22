@@ -45,6 +45,7 @@ namespace PortableMvxAsync.MvxUseThePlugin.Core.ViewModels
 
             // AWAIT ERROR HERE:
             // Cannot await 'System.Threading.Tasks.Task<string>'	
+            // VS red squiggle on await says "Type System.Threading.Tasks.Task<string> not awaitable"
 
             string result = await _asyncTesterPlugin.LongRunningMethodAsync(
                 "this is a call and message to LongRunningMethodAsync inside the Mvx plugin from FirstViewModel!!");
