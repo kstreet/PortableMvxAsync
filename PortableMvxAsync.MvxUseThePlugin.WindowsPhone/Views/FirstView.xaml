@@ -32,7 +32,9 @@
 		   <StackPanel>
 			<TextBox Text="{Binding Hello, Mode=TwoWay}" />
 			<TextBlock Text="{Binding Hello}" />
-		   </StackPanel>
+            <TextBlock Text="{Binding SimpleAsyncText}" />
+                <Button Height="100" Content="DoSimpleAsync" HorizontalContentAlignment="Stretch" Command="{Binding SimpleAsyncCommand}" />
+            </StackPanel>
         </Grid>
     </Grid>
 

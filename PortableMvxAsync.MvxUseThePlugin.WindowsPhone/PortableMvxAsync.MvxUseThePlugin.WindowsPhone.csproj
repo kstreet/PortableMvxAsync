@@ -85,7 +85,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Bootstrap\SimpleAsyncBootstrap.cs" />
     <Compile Include="DebugTrace.cs" />
+    <Compile Include="MyDebugTrace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\FirstView.xaml.cs">
@@ -118,10 +120,21 @@
     <Content Include="ToDo-MvvmCross\_ Windows Phone UI.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PortableMvxAsync.MvxPlugins.SimpleAsync.WindowsPhone\PortableMvxAsync.MvxPlugins.SimpleAsync.WindowsPhone.csproj">
+      <Project>{7C0E6C9A-0941-4A97-BC13-54DB4C658F66}</Project>
+      <Name>PortableMvxAsync.MvxPlugins.SimpleAsync.WindowsPhone</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PortableMvxAsync.MvxPlugins.SimpleAsync\PortableMvxAsync.MvxPlugins.SimpleAsync.csproj">
+      <Project>{DF0DDF76-A813-4556-96B1-348C74F64D99}</Project>
+      <Name>PortableMvxAsync.MvxPlugins.SimpleAsync</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PortableMvxAsync.MvxUseThePlugin.Core\PortableMvxAsync.MvxUseThePlugin.Core.csproj">
       <Project>{77EA03F6-237A-4E11-BDA7-73F18DB43DF8}</Project>
       <Name>PortableMvxAsync.MvxUseThePlugin.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

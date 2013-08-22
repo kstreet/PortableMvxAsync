@@ -22,6 +22,13 @@ namespace PortableMvxAsync.MvxUseThePlugin.Core.ViewModels
             set { _hello = value; RaisePropertyChanged(() => Hello); }
         }
 
+        private string _simpleAsyncText;
+        public string SimpleAsyncText
+        {
+            get { return _simpleAsyncText; }
+            set { _simpleAsyncText = value; RaisePropertyChanged(() => SimpleAsyncText); }
+        }
+
         private MvxCommand _simpleAsyncCommand;
         public ICommand SimpleAsyncCommand
         {
@@ -50,8 +57,8 @@ namespace PortableMvxAsync.MvxUseThePlugin.Core.ViewModels
             string result = await _asyncTesterPlugin.LongRunningMethodAsync(
                 "this is a call and message to LongRunningMethodAsync inside the Mvx plugin from FirstViewModel!!");
 
-            // TODO:
-            // this is where I would set a View property to the return Value above
+            // set property on theis ViewModel with result of Async call
+            SimpleAsyncText = result;
         }
     }
 }
