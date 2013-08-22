@@ -68,13 +68,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ToDo-MvvmCross\_ Core.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\PortableMvxAsync.MvxPlugins.SimpleAsync\PortableMvxAsync.MvxPlugins.SimpleAsync.csproj">
       <Project>{df0ddf76-a813-4556-96b1-348c74f64d99}</Project>
       <Name>PortableMvxAsync.MvxPlugins.SimpleAsync</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ToDo-MvvmCross\_ Core.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.8\tools\Microsoft.Bcl.Build.targets" />
